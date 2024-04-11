@@ -16,17 +16,17 @@
 This is a Kaggle-sourced dataset used to refine my data analytics skills further and gain more data science experience. The “Customer Behavior and Shopping Habits Dataset” contains a variety of intricate insights into customer preferences and mannerisms when shopping from an untitled online retailer.
 
 ### Customer Analysis
-Full customer analysis in Jupyter Notebook.
+All SQL queries on GitHub.
 
-Link: [Customer Analysis]()
+Link: [Customer Analysis](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/queries.sql)
 
 ### Customer Analysis Dataset
 
-The Consumer Behavior and Shopping Habits Dataset provides a detailed overview of consumer preferences and purchasing behaviors. It includes demographic information, purchase history, product preferences, and preferred shopping channels. This dataset is essential for businesses aiming to tailor their strategies to meet customer needs and enhance their shopping experience, ultimately driving sales and loyalty.
+The Consumer Behavior and Shopping Habits Dataset provides a detailed overview of consumer preferences and purchasing behaviors. It includes demographic information, purchase history, product preferences, and preferred shopping channels. This dataset is essential for businesses aiming to tailor their strategies to meet customer needs and enhance their shopping experience, ultimately driving sales and loyalty. This project was originally completed using the MySQL platform and the original dataset formatting has been adjusted and cleaned to work on the MySQL platform.
 
 Link: [Original Kaggle Dataset](https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset/)
 
-Link: [Shopping Behavior Dataset](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/shopping_behavior_updated.csv)
+Link: [Cleaned Shopping Behavior Dataset](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/sb_clean.csv)
 
 | Shopping Behavior Dataset Tables | Table Description |
 | :------------- | :------------ |
