@@ -68,7 +68,7 @@ SELECT customer_id,
 FROM sb_clean
 
 	
-/* Discovering the clientele gender and age diversity */
+/* Uncovering the main customer demographic’s age and gender */
 
 SELECT gender, COUNT(gender) total_customers, ROUND(avg(age), 1) avg_age
 FROM customer_orders
@@ -76,7 +76,7 @@ GROUP BY gender
 ORDER BY total_customers DESC
 
 	
-/* Finding the total revenue and customer concentration for each state */
+/* Calculating customer concentrations for each state with the amount of revenue generated */
 	
 SELECT location, COUNT(customer_id) customer_count, SUM(purchase_total) state_revenue
 FROM customer_orders
@@ -86,11 +86,10 @@ ORDER BY state_revenue DESC
 
 /* Finding customer favorite products */
 	
-SELECT item_sub_cat product, category, (item_sub_cat) quantity_sold, SUM(purchase_total) item_revenue
+SELECT item_sub_cat product, category, (item_sub_cat) quantity_sold, SUM(purchase_total) product_revenue
 FROM customer_orders
 GROUP BY product, category
-ORDER BY item_revenue DESC
-LIMIT 10
+ORDER BY product_revenue DESC
 
 
 /* Calculating the average customer rating for company products */
@@ -103,10 +102,10 @@ ORDER BY avg_rating DESC
 	
 /* Gauging customer sentiment through paid shipping preferences */
 	
-SELECT shipping_type, COUNT(shipping_type) shipping_total
+SELECT shipping_type, COUNT(shipping_type) shipping_total_count
 FROM customer_orders
 GROUP BY shipping_type
-ORDER BY shipping_total DESC
+ORDER BY shipping_total_count DESC
 
 	
 /* Customers with x number of previous orders */
