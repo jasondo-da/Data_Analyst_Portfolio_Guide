@@ -1,4 +1,4 @@
-/* Creating the dataset table */
+/* Creating the dataset table with the correct data types and keys */
 
 CREATE TABLE shopping_behavior.customer_orders(
 	customer_id SMALLINT UNSIGNED,
@@ -7,17 +7,17 @@ CREATE TABLE shopping_behavior.customer_orders(
     	item_sub_cat VARCHAR(20),
    	category VARCHAR(20),
     	purchase_total SMALLINT UNSIGNED,
-    	location VARCHAR(20),
+   	 location VARCHAR(20),
    	 size VARCHAR(20),
   	color VARCHAR(20),
-    	season ENUM('spring', 'summer', 'fall', 'winter'),
+   	 season ENUM('spring', 'summer', 'fall', 'winter'),
   	review_rating float(2,1),
-    	subscription_status ENUM('yes', 'no'),
+   	 subscription_status ENUM('yes', 'no'),
   	shipping_type VARCHAR(20),
-    	discount_applied ENUM('yes', 'no'),
+   	 discount_applied ENUM('yes', 'no'),
   	promo_code_applied ENUM('yes', 'no'),
   	previous_orders SMALLINT UNSIGNED,
-    	payment_method VARCHAR(20),
+   	 payment_method VARCHAR(20),
    	purchase_frequency VARCHAR(20),
     
     CONSTRAINT unique_id PRIMARY KEY (customer_id)
@@ -76,13 +76,12 @@ GROUP BY gender
 ORDER BY total_customers DESC
 
 	
-/* Finding the revenue and number of customers for each state */
+/* Finding the total revenue and customer concentration for each state */
 	
 SELECT location, COUNT(customer_id) customer_count, SUM(purchase_total) state_revenue
 FROM customer_orders
 GROUP BY location
 ORDER BY state_revenue DESC
-LIMIT 10
 
 
 /* Finding customer favorite products */
@@ -93,34 +92,16 @@ GROUP BY product, category
 ORDER BY item_revenue DESC
 LIMIT 10
 
------------------------------------------------------------------------------------------------------------
-/* work in process */
-	
-/* Creating a view to get the average product review score across all categories */
-	
-CREATE VIEW avg_overall_rating (review_rating) 
-AS
-SELECT ROUND(AVG(review_rating), 2)
-FROM customer_orders
 
+/* Calculating the average customer rating for company products */
 	
-/*  */
-	
-SELECT item_sub_cat product, ROUND(AVG(review_rating), 2) avg_rating
+SELECT category, ROUND(AVG(review_rating), 2) avg_rating
 FROM customer_orders
-GROUP BY item_sub_cat
-ORDER BY avg_rating DESC
-LIMIT 10
-
-
-/*  */
-	
-SELECT ROUND(AVG(review_rating), 2) avg_overall_rating
-FROM customer_orders
+GROUP BY category
 ORDER BY avg_rating DESC
 
 	
-/*  */
+/* Gauging customer sentiment through paid shipping preferences */
 	
 SELECT shipping_type, COUNT(shipping_type) shipping_total
 FROM customer_orders
@@ -128,9 +109,19 @@ GROUP BY shipping_type
 ORDER BY shipping_total DESC
 
 	
-/*  */
+/* Customers with x number of previous orders */
 	
+SELECT COUNT(previous_orders) '5+_orders_customers'
+FROM customer_orders
+WHERE previous_orders > 5
+ORDER BY previous_orders DESC
+
 SELECT COUNT(previous_orders) '10+_orders_customers'
 FROM customer_orders
 WHERE previous_orders > 10
+ORDER BY previous_orders DESC
+
+SELECT COUNT(previous_orders) '20+_orders_customers'
+FROM customer_orders
+WHERE previous_orders > 20
 ORDER BY previous_orders DESC
