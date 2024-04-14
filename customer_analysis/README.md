@@ -55,6 +55,81 @@ The purpose of this project is to be part of an ongoing process to refine and de
 
 ## Analysis Outline
 
+Discovering the main clientele gender and age demographic
+
+```sql
+SELECT gender, COUNT(gender) total_customers, ROUND(avg(age), 1) avg_age
+FROM customer_orders
+GROUP BY gender
+ORDER BY total_customers DESC
+```
+
+Output:
+| gender | total_customers | avg_age | 
+| :-----------: | :----------: | :-----------: |
+| male | 2652 | 44.1 |
+| female | 1248 | 44.0 |
+
+ 
+/* Finding the total revenue and customer concentration for each state */
+
+```sql
+SELECT location, COUNT(customer_id) customer_count, SUM(purchase_total) state_revenue
+FROM customer_orders
+GROUP BY location
+ORDER BY state_revenue DESC
+```
+
+/* Finding customer favorite products */
+
+```sql
+SELECT item_sub_cat product, category, (item_sub_cat) quantity_sold, SUM(purchase_total) item_revenue
+FROM customer_orders
+GROUP BY product, category
+ORDER BY item_revenue DESC
+LIMIT 10
+```
+
+/* Calculating the average customer rating for company products */
+
+```sql
+SELECT category, ROUND(AVG(review_rating), 2) avg_rating
+FROM customer_orders
+GROUP BY category
+ORDER BY avg_rating DESC
+```
+	
+/* Gauging customer sentiment through paid shipping preferences */
+
+```sql	
+SELECT shipping_type, COUNT(shipping_type) shipping_total
+FROM customer_orders
+GROUP BY shipping_type
+ORDER BY shipping_total DESC
+```
+	
+/* Customers with x number of previous orders */
+
+```sql
+SELECT COUNT(previous_orders) '5+_orders_customers'
+FROM customer_orders
+WHERE previous_orders > 5
+ORDER BY previous_orders DESC
+```
+
+```sql
+SELECT COUNT(previous_orders) '10+_orders_customers'
+FROM customer_orders
+WHERE previous_orders > 10
+ORDER BY previous_orders DESC
+```
+
+```sql
+SELECT COUNT(previous_orders) '20+_orders_customers'
+FROM customer_orders
+WHERE previous_orders > 20
+ORDER BY previous_orders DESC
+```
 
 ## Executive Summary
 
