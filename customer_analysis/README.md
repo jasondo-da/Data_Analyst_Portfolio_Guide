@@ -15,9 +15,9 @@ This is a Kaggle-sourced dataset used to refine my data analytics skills further
 ### Customer Analysis SQL Queries
 All SQL queries on GitHub.
 
-Link: [Customer Analysis](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/queries.sql)
+Link: [Consumer Behavior Analysis](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/queries.sql)
 
-### Customer Analysis Dataset
+### Consumer Behavior Analysis Dataset
 
 The Consumer Behavior and Shopping Habits Dataset provides a detailed overview of consumer preferences and purchasing behaviors. It includes demographic information, purchase history, product preferences, and preferred shopping channels. This dataset is essential for businesses aiming to tailor their strategies to meet customer needs and enhance their shopping experience, ultimately driving sales and loyalty. This project was originally completed using the MySQL platform and the original dataset formatting has been adjusted and cleaned to work on the MySQL platform.
 
