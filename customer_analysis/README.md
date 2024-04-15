@@ -1,21 +1,18 @@
-# Customer Analysis
+# Consumer Behavior Analysis
 
 ## Table of Contents
 
 - [Project Introduction](#project-introduction)
-    - [Customer Analysis](#customer-analysis)
+    - [Customer Analysis SQL Queries](#customer-analysis-sql-queries)
     - [Customer Analysis Dataset](#customer-analysis-dataset)
 - [Objective](#objective)
 - [Analysis Outline](#analysis-outline)
-- [Executive Summary](#executive-summary)
-    - [Conclusion](#conclusion)
-    - [Key Findings](#key-findings)
 
 ## Project Introduction
 
 This is a Kaggle-sourced dataset used to refine my data analytics skills further and gain more data science experience. The “Customer Behavior and Shopping Habits Dataset” contains a variety of intricate insights into customer preferences and mannerisms when shopping from an untitled online retailer.
 
-### Customer Analysis
+### Customer Analysis SQL Queries
 All SQL queries on GitHub.
 
 Link: [Customer Analysis](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/queries.sql)
@@ -55,87 +52,107 @@ The purpose of this project is to be part of an ongoing process to refine and de
 
 ## Analysis Outline
 
-Discovering the main clientele gender and age demographic
-
 ```sql
+/* Uncovering the main customer demographic’s age and gender */
 SELECT gender, COUNT(gender) total_customers, ROUND(avg(age), 1) avg_age
 FROM customer_orders
 GROUP BY gender
 ORDER BY total_customers DESC
 ```
 
-Output:
 | gender | total_customers | avg_age | 
 | :-----------: | :----------: | :-----------: |
 | male | 2652 | 44.1 |
 | female | 1248 | 44.0 |
 
- 
-/* Finding the total revenue and customer concentration for each state */
 
 ```sql
+/* Calculating customer concentrations for each state with the amount of revenue generated */
 SELECT location, COUNT(customer_id) customer_count, SUM(purchase_total) state_revenue
 FROM customer_orders
 GROUP BY location
 ORDER BY state_revenue DESC
 ```
 
-/* Finding customer favorite products */
+[Output Data](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/customer_concentration_and_revenue.csv)
+
 
 ```sql
-SELECT item_sub_cat product, category, (item_sub_cat) quantity_sold, SUM(purchase_total) item_revenue
+/* Finding customer favorite products */
+SELECT item_sub_cat product, category, (item_sub_cat) quantity_sold, SUM(purchase_total) product_revenue
 FROM customer_orders
 GROUP BY product, category
-ORDER BY item_revenue DESC
-LIMIT 10
+ORDER BY product_revenue DESC
 ```
 
-/* Calculating the average customer rating for company products */
+[Output Data](https://github.com/jasondo-da/SQL_Portfolio/blob/main/customer_analysis/product_popularity.csv)
+
 
 ```sql
+/* Calculating the average customer rating for company products */
 SELECT category, ROUND(AVG(review_rating), 2) avg_rating
 FROM customer_orders
 GROUP BY category
 ORDER BY avg_rating DESC
 ```
-	
-/* Gauging customer sentiment through paid shipping preferences */
 
-```sql	
-SELECT shipping_type, COUNT(shipping_type) shipping_total
-FROM customer_orders
-GROUP BY shipping_type
-ORDER BY shipping_total DESC
-```
-	
-/* Customers with x number of previous orders */
+| category | avg_rating |
+| :-----------: | :----------: |
+| footwear | 3.79 |
+| accessories | 3.77 |
+| outerwear | 3.75 |
+| clothing | 3.72 |
+
 
 ```sql
+/* Gauging customer sentiment through paid shipping preferences */
+SELECT shipping_type, COUNT(shipping_type) shipping_total_count
+FROM customer_orders
+GROUP BY shipping_type
+ORDER BY shipping_total_count DESC
+```
+
+| shipping_type | shipping_total_count |
+| :-----------: | :----------: |
+| free shipping | 675 |
+| standard | 654 |
+| store pickup | 650 |
+| next day air | 648 |
+| express | 646 |
+| 2-day shipping | 627 |
+
+
+```sql
+/* Customers with 5 number of previous orders */
 SELECT COUNT(previous_orders) '5+_orders_customers'
 FROM customer_orders
 WHERE previous_orders > 5
 ORDER BY previous_orders DESC
 ```
+| 5+_orders_customers |
+| :-----------: |
+| 3476 |
 
 ```sql
+/* Customers with 10 number of previous orders */
 SELECT COUNT(previous_orders) '10+_orders_customers'
 FROM customer_orders
 WHERE previous_orders > 10
 ORDER BY previous_orders DESC
 ```
 
+| 10+_orders_customers |
+| :-----------: |
+| 3116 |
+
 ```sql
+/* Customers with 20 number of previous orders */
 SELECT COUNT(previous_orders) '20+_orders_customers'
 FROM customer_orders
 WHERE previous_orders > 20
 ORDER BY previous_orders DESC
 ```
 
-## Executive Summary
-
-### Conclusion
-
-
-### Key Findings
-
-
+| 20+_orders_customers |
+| :-----------: |
+| 2339 |
