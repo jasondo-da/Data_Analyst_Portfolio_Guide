@@ -12,7 +12,8 @@ Welcome to my data analysis portfolio! This repository is a collection of comple
 
 | Project Link | Technical Skills Used | Project Description |
 | :--------- | :--------- | :--------- |
-| :bookmark_tabs:[Consumer Behavior Analysis](https://github.com/jasondo-da/Consumer_Behavior_Analysis) | Data Analysis | The Consumer Behavior and Shopping Habits Dataset provides a detailed overview of consumer preferences and purchasing behaviors. It includes demographic information, purchase history, product preferences, and preferred shopping channels. This dataset is essential for businesses aiming to tailor their strategies to meet customer needs and enhance their shopping experience, ultimately driving sales and loyalty. This project was originally completed using the MySQL platform and the original dataset formatting has been adjusted and cleaned to work on the MySQL platform. |
+| :bookmark_tabs:[Consumer Behavior Analysis](https://github.com/jasondo-da/Consumer_Behavior_Analysis) | Customer Analysis | The Consumer Behavior and Shopping Habits Dataset provides a detailed overview of consumer preferences and purchasing behaviors. It includes demographic information, purchase history, product preferences, and preferred shopping channels. This dataset is essential for businesses aiming to tailor their strategies to meet customer needs and enhance their shopping experience, ultimately driving sales and loyalty. This project was originally completed using the MySQL platform and the original dataset formatting has been adjusted and cleaned to work on the MySQL platform. |
+| :bank:[Bank Customer Analysis](https://github.com/jasondo-da/Bank_Customer_Analysis) | Customer Analysis |  |
 
 
 
