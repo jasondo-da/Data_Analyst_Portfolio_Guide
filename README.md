@@ -1,4 +1,4 @@
-# 🗺 Jason's Data Analyst Portfolio
+# :world_map: Jason's Data Analyst Portfolio
 
 Welcome to my data analysis portfolio! This repository is a collection of completed and ongoing projects and queries I've worked on, showcasing my technical skills and expertise in database management, data analysis, data visualization, and data manipulation using SQL, Python, Tableau, and other related platforms.
 
@@ -13,7 +13,7 @@ Welcome to my data analysis portfolio! This repository is a collection of comple
 | Project Link | Technical Skills Used | Project Description |
 | :--------- | :--------- | :--------- |
 | :bookmark_tabs:[Consumer Behavior Analysis](https://github.com/jasondo-da/Consumer_Behavior_Analysis) | Customer Analysis | The Consumer Behavior and Shopping Habits Dataset provides a detailed overview of consumer preferences and purchasing behaviors. It includes demographic information, purchase history, product preferences, and preferred shopping channels. This dataset is essential for businesses aiming to tailor their strategies to meet customer needs and enhance their shopping experience, ultimately driving sales and loyalty. This project was originally completed using the MySQL platform and the original dataset formatting has been adjusted and cleaned to work on the MySQL platform. |
-| :bank:[Bank Customer Analysis](https://github.com/jasondo-da/Bank_Customer_Analysis) | Customer Analysis | In Progress |
+| :bank:[Bank Customer Analysis](https://github.com/jasondo-da/Bank_Customer_Analysis) | Data Cleaning, Customer Analysis | SQL was used to clean, and discover new interesting insights within the dataset to better understand current customer trends and preferences to identify traits of the ideal customer for a targeted marketing campaign to attract other customers with similar characteristics. Key areas of focus include customer performance by geographic location, age, and credit score. This project was originally completed using the MySQL platform and the original dataset formatting has been adjusted and cleaned to work on the MySQL platform. |
 
 
 
@@ -30,7 +30,7 @@ Welcome to my data analysis portfolio! This repository is a collection of comple
 
 | Project Link | Project Description | Dashboard Link |
 | :--------- | :--------- | :--------- |
-| :factory:[Superstore Business Analysis](https://github.com/jasondo-da/Superstore_Business_Analysis) | The Superstore business is financially struggling and is considering going into bankruptcy. I have been hired as a consultant to review the Superstore's logistics and operations to increase its profitability and avoid bankruptcy. | [Dashboard](https://public.tableau.com/app/profile/jason.do5779/viz/saving_superstore_analysis_csv/Dashboard1) |
+| :department_store:[Superstore Business Analysis](https://github.com/jasondo-da/Superstore_Business_Analysis) | The Superstore business is financially struggling and is considering going into bankruptcy. I have been hired as a consultant to review the Superstore's logistics and operations to increase its profitability and avoid bankruptcy. | [Dashboard](https://public.tableau.com/app/profile/jason.do5779/viz/saving_superstore_analysis_csv/Dashboard1) |
 | :incoming_envelope:[Superstore Returns Analysis](https://github.com/jasondo-da/Superstore_Returns_Analysis) | In this project, I am preparing a report for the CEO of the Superstore to help them understand the source and cause behind the increase in customer order returns and offer possible ideas on how to reduce the volume of returned orders. | [Dashboard](https://public.tableau.com/app/profile/jason.do5779/viz/Sprint4Project_16841181812540/SuperstoreReturnAnalysisStory) |
 
 
