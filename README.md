@@ -1,24 +1,27 @@
 # :world_map: Jason's Data Analyst Portfolio
 
-Welcome to my data analysis portfolio! This repository is a collection of completed and ongoing projects and queries I've worked on, showcasing my technical skills and expertise in database management, data analysis, data visualization, and data manipulation using SQL, Python, Tableau, and other related platforms.
+Welcome to my Data Analysis Portfolio! :wave:
+
+This repository features a collection of completed and ongoing projects that demonstrate my skills in data analysis, database management, data visualization, and data manipulation. It showcases my proficiency with SQL, Python, Tableau, spreadsheets, and other data analyst related tools, highlighting both technical expertise and practical problem-solving across diverse datasets and business scenarios.
 
 ## :books: Table of Contents
-- [SQL](#sql)
-- [Python](#python)
-- [Tableau](#tableau)
-- [Google Sheets](#google-sheets)
+- [SQL Projects](#sql-projects)
+- [Python Projects](#python-projects)
+- [Tableau Projects](#tableau-projects)
+- [Spreadsheets Projects](#spreadsheets-projects)
+- [End-to-End Projects](#end-to-end-projects)
 
-## SQL
+## SQL Projects
 
-| Project Link | Technical Skills Used | Project Description |
-| :--------- | :--------- | :--------- |
-| :bookmark_tabs:[Consumer Behavior Analysis](https://github.com/jasondo-da/Consumer_Behavior_Analysis) | SQL Commands, Database Design, Database Performance Tuning, SQL Scripting, Data Manipulation, Customer Analysis |A business owner is inquiring about new insights on who their current customers are and their shopping behavior history with the business. This analysis uses SQL to uncover these new insights into customer product preferences and purchase history. |
-| :bank:[Bank Customer Analysis](https://github.com/jasondo-da/Bank_Customer_Analysis) | Data Cleaning, SQL commands, Database Design, Database Performance Tuning, SQL Scripting, Data Manipulation, Customer Analysis |  A bank is interested in its customers’ demographic and their characteristics to grow their business and attract other similar customers. SQL will be used to uncover trends in customer behavior and preferences to identify traits of the ideal customer for a targeted marketing campaign. |
-| :bike:[Bike Sales Business Analysis](https://github.com/jasondo-da/Bike_Sales_Business_Analysis) | Data Manipulation, Common Table Expressions, Window Functions, Business Analysis  | In this descriptive analysis, I will identify trends and relationships within the current and historical data and evaluate the financial performance of this company using MySQL. During the analysis process, I want to see if I can help optimize their business opportunities by answering key business-related questions. |
+| Project Link | Database Management Tool | Technical Skills Used | Project Descriptin |
+| :--------- | :--------- | :--------- | :--------- |
+| :bookmark_tabs:[Consumer Behavior Analysis](https://github.com/jasondo-da/Consumer_Behavior_Analysis) | MySQL | SQL Commands, Database Design, Database Performance Tuning, SQL Scripting, Data Manipulation, Customer Analysis |A business owner is inquiring about new insights on who their current customers are and their shopping behavior history with the business. This analysis uses SQL to uncover these new insights into customer product preferences and purchase history. |
+| :bank:[Bank Customer Analysis](https://github.com/jasondo-da/Bank_Customer_Analysis) | MySQL | Data Cleaning, SQL commands, Database Design, Database Performance Tuning, SQL Scripting, Data Manipulation, Customer Analysis |  A bank is interested in its customers’ demographic and their characteristics to grow their business and attract other similar customers. SQL will be used to uncover trends in customer behavior and preferences to identify traits of the ideal customer for a targeted marketing campaign. |
+| :bike:[Bike Sales Business Analysis](https://github.com/jasondo-da/Bike_Sales_Business_Analysis) | MySQL | Data Manipulation, Common Table Expressions, Window Functions, Business Analysis  | In this descriptive analysis, I will identify trends and relationships within the current and historical data and evaluate the financial performance of this company using MySQL. During the analysis process, I want to see if I can help optimize their business opportunities by answering key business-related questions. |
 
 
 
-## Python
+## Python Projects
 
 | Project Link | Technical Skills Used | Libraries Used | Project Description |
 | :--------- | :--------- | :--------- | :--------- |
@@ -32,7 +35,7 @@ Welcome to my data analysis portfolio! This repository is a collection of comple
 
 
 
-## Tableau
+## Tableau Projects
 
 | Project Link | Project Description | Dashboard Link |
 | :--------- | :--------- | :--------- |
@@ -42,9 +45,16 @@ Welcome to my data analysis portfolio! This repository is a collection of comple
 
 
 
-## Google Sheets
+## Spreadsheets Projects
 
-| Project Link | Technical Skills Used | Project Description | Google Sheets Link |
+| Project Link | Technical Skills Used | Project Description | Spreadsheets Link |
 | :--------- | :--------- | :--------- | :--------- |
 | :athletic_shoe:[2024 Nike Global Sales Dashboard](https://github.com/jasondo-da/Nike_Global_Sales_Analysis) | Data Cleaning, Data Manipulation, Data Mining, Pivot Tables, Data Visualization, Dashboard Design | This project analyzes Nike's global sales in 2024, utilizing Google Sheets to identify key performance indicators and build a real-time dashboard for shareholders to assist in data-driven business decisions. | [Google Sheets](https://docs.google.com/spreadsheets/d/1jyjGM5so5nkSOfy4nIrgU_kqcJxUgST2sn0BhdglUOU/edit?usp=sharing) |
 | :house:[NY Airbnb Analysis](https://github.com/jasondo-da/NY_Airbnb_Analysis) | Data Cleaning, Data Manipulation, Data Mining, Pivot Tables, Data Visualization, Business Analysis, Asset Analysis, Cashflow Model | A real estate investor has asked for assistance in locating a new rental property for their clients who will be using it as a vacation home. The real estate investor is looking for a property within the Manhattan borough of New York City to invest in. | [Google Sheets](https://docs.google.com/spreadsheets/d/1Chxvi7KDljdAGcoDFA8jMwv8xXIff41DNOTWdUam3nM/edit?usp=sharing) |
+
+
+## End-to-End Projects
+
+| Project Link | Workflow Overview | Tools Used | Libraries Used | Technical Skills Used | Project Description | Dashboard Link |
+| :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- |
+| :pill::shopping_cart: [Nutritional Products Sales Breakdown](https://github.com/jasondo-da/Nutritional_Products_Sales_Breakdown) | SQL → Python → Tableau |
